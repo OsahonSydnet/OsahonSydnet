@@ -1,53 +1,113 @@
-/* Universal Selector */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #FF5722;
+    --text-color: #333;
+    --background-color: #f0f0f0;
 }
 
-/* Class Selectors */
-.box {
-  margin: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  background-color: #ddd;
-  color: #000;
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Additional Styles */
-main img {
-  float: right;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
 }
 
-aside {
-  position: relative;
+header img {
+    height: 50px;
 }
 
-aside h2 {
-  position: absolute;
-  top: 47px;
-  left: 150px;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
 }
 
-/* Footer Styles */
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.hero article img {
+    float: right;
+    margin-left: 1rem;
+    width: 150px;
+}
+
+section {
+    padding: 2rem;
+}
+
+section h2 {
+    color: var(--secondary-color);
+}
+
+section img {
+    width: 100px;
+    height: auto;
+    margin: 0.5rem;
+}
+
 footer {
-  margin-top: 15px;
-  border-top: 1px solid #000;
-  text-align: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
 }
 
-/* Navigation Styles */
-header nav {
-  background-color: steelblue;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+.sociallinks a {
+    margin: 0 10px;
 }
 
-header nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #fff;
+.sociallinks img {
+    width: 30px;
+    height: auto;
 }
 
+.sociallinks a {
+    text-decoration: none;
+}
