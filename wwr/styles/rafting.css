@@ -1,14 +1,27 @@
- /* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-color: #4CAF50; /* Example color */
+    --secondary-color: #f0f0f0;
+    --text-color: #333;
+    --background-color: #fff;
 }
 
+/* Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* Header Styles */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--background-color);
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -20,7 +33,7 @@ header img {
 }
 
 nav a {
-    color: #fff;
+    color: var(--background-color);
     text-decoration: none;
     margin: 0 10px;
 }
@@ -29,6 +42,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Hero Styles */
 .hero {
     position: relative;
     text-align: center;
@@ -36,6 +50,7 @@ nav a:hover {
 }
 
 .hero img {
+    display: block;
     width: 100%;
     height: auto;
 }
@@ -50,54 +65,48 @@ nav a:hover {
     padding: 10px 20px;
 }
 
-article {
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255,0.8);
     padding: 20px;
-    background-color: #fff;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    color: var(--text-color);
 }
 
-article img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
+.hero article img {
+    float: right;
+    margin-left: 10px;
 }
 
-article h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
+/* Section Styles */
 section {
     padding: 20px;
-    background-color: #fff;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+    color: var(--primary-color);
 }
 
-section img {
-    width: 18%;
-    height: auto;
-    margin: 1%;
-    border-radius: 10px;
+section p {
+    line-height: 1.6;
 }
 
+/* Footer Styles */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--background-color);
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
 }
 
-footer a img {
-    width: 32px;
+footer p {
+    margin: 0;
+}
+
+footer img {
+    width: 30px;
     height: auto;
+    margin: 0 5px;
 }
